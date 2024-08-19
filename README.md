@@ -1,4 +1,3 @@
-
 # Doggiepedia App
 
 Doggiepedia App es una aplicación móvil construida con **React Native** que utiliza la API de [Doggiepedia](https://api.doggiepedia.org/) para mostrar información sobre diferentes razas de perros. 
@@ -22,7 +21,7 @@ Esta aplicación aún está en desarrollo. Algunas características están en pr
 ### Prerrequisitos
 
 - Node.js y npm instalados
-- Expo CLI instalado (si se usa Expo)
+- Expo CLI instalado
 
 ### Instrucciones
 
@@ -32,19 +31,13 @@ Esta aplicación aún está en desarrollo. Algunas características están en pr
    ```
 2. **Navegar al directorio del proyecto**:
    ```bash
-   cd nombre-del-repositorio
+   cd doggiepedia
    ```
 3. **Instalar las dependencias**:
    ```bash
    npm install
    ```
 4. **Iniciar el proyecto en un emulador o dispositivo físico**:
-   - Si usas Expo:
      ```bash
      expo start
-     ```
-   - Si usas React Native CLI:
-     ```bash
-     npx react-native run-android
-     npx react-native run-ios
      ```
