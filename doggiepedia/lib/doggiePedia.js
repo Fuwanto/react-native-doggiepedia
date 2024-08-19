@@ -22,8 +22,8 @@ export async function getAllBreeds(page = 1) {
   }
 }
 
-export async function getBreedDetails(breedSlug) {
-  const apiUrl = `${apiUrlBase}/breeds/${breedSlug}`;
+export async function getBreedDetails(breedPath) {
+  const apiUrl = `${apiUrlBase}/breeds/${breedPath}`;
 
   try {
     const response = await fetch(apiUrl, {
@@ -45,8 +45,7 @@ export async function getBreedDetails(breedSlug) {
 }
 
 export async function getBreedGroupData(groupId) {
-  const apiUrl = `${apiUrlBase}/group?group=${groupId}`;
-
+  const apiUrl = `${apiUrlBase}/group?group_id=${groupId}`;
   try {
     const response = await fetch(apiUrl, {
       method: "GET",
@@ -86,4 +85,12 @@ export async function getBreedOfTheDay() {
   } catch (error) {
     console.error("Error fetching data:", error.message);
   }
+}
+
+export function getBreedImage(path) {
+  return `https://assets.doggiepedia.org/dogs/${path}.webp`;
+}
+
+export function getBreedIGroupImage(slug) {
+  return `https://assets.doggiepedia.org/breed-groups/${slug}.webp`;
 }

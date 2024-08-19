@@ -1,16 +1,15 @@
 import { Stack } from "expo-router";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 
 export default function Layout() {
   return (
-    <View style={styles.container}>
-      <Stack />
+    <View className="flex-1">
+      <Stack
+        screenOptions={{
+          headerTintColor: "black",
+          headerTitle: "DoggiePedia",
+        }}
+      />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
