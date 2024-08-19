@@ -1,6 +1,3 @@
-Aquí tienes un ejemplo de README para tu aplicación hecha con React Native que usa la API de Doggiepedia:
-
----
 
 # Doggiepedia App
 
