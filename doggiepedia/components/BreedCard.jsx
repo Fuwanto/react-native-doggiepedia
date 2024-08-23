@@ -12,7 +12,7 @@ export default function BreedCard({ breed }) {
         <View className="items-center">
           <Image
             source={{ uri: getBreedImage(breed.path) }}
-            className="w-full h-48 rounded-lg mb-4"
+            className="w-64 h-52 rounded-lg mb-4"
             resizeMode="cover"
           />
           <Text className="text-xl font-bold text-orange-950 mb-2">

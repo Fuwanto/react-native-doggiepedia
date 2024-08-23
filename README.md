@@ -1,15 +1,17 @@
 # Doggiepedia App
 
-Doggiepedia App es una aplicación móvil construida con **React Native** que utiliza la API de [Doggiepedia](https://api.doggiepedia.org/) para mostrar información sobre diferentes razas de perros. 
+Doggiepedia App es una aplicación móvil construida con **React Native** que utiliza la API de [Doggiepedia](https://api.doggiepedia.org/) para mostrar información sobre diferentes razas de perros.
 
 ## Características
 
+<img src="doggiepedia/screenshoots/home.jpeg" alt="Captura de pantalla de la aplicación" width="150"/>
+<img src="doggiepedia/screenshoots/breed-details-1.jpeg" alt="Captura de pantalla de la aplicación" width="150"/>
+<img src="doggiepedia/screenshoots/breed-details.jpeg" alt="Captura de pantalla de la aplicación" width="150"/>
+<img src="doggiepedia/screenshoots/group-details.jpeg" alt="Captura de pantalla de la aplicación" width="150"/>
+<p></p>
+
 - **Explorar Razas de Perros**: Los usuarios pueden explorar diversas razas de perros y obtener información detallada sobre cada una.
 - **Interfaz Intuitiva**: La aplicación está diseñada para ser fácil de usar y navegar.
-
-## Estado del Proyecto
-
-Esta aplicación aún está en desarrollo. Algunas características están en proceso de implementación y pueden no estar completamente funcionales o sujetas a cambios.
 
 ## Tecnologías Utilizadas
 
@@ -38,6 +40,6 @@ Esta aplicación aún está en desarrollo. Algunas características están en pr
    npm install
    ```
 4. **Iniciar el proyecto en un emulador o dispositivo físico**:
-     ```bash
-     expo start
-     ```
+   ```bash
+   expo start
+   ```
