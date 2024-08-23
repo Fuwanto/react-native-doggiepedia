@@ -4,11 +4,7 @@ Doggiepedia App es una aplicación móvil construida con **React Native** que ut
 
 ## Características
 
-<img src="doggiepedia/screenshoots/home.jpeg" alt="Captura de pantalla de la aplicación" width="150"/>
-<img src="doggiepedia/screenshoots/breed-details-1.jpeg" alt="Captura de pantalla de la aplicación" width="150"/>
-<img src="doggiepedia/screenshoots/breed-details.jpeg" alt="Captura de pantalla de la aplicación" width="150"/>
-<img src="doggiepedia/screenshoots/group-details.jpeg" alt="Captura de pantalla de la aplicación" width="150"/>
-<p></p>
+<img src="doggiepedia/screenshoots/home.jpeg" alt="Captura de pantalla de la aplicación" width="200"/><img src="doggiepedia/screenshoots/breed-details-1.jpeg" alt="Captura de pantalla de la aplicación" width="200"/><img src="doggiepedia/screenshoots/breed-details.jpeg" alt="Captura de pantalla de la aplicación" width="200"/><img src="doggiepedia/screenshoots/group-details.jpeg" alt="Captura de pantalla de la aplicación" width="200"/>
 
 - **Explorar Razas de Perros**: Los usuarios pueden explorar diversas razas de perros y obtener información detallada sobre cada una.
 - **Interfaz Intuitiva**: La aplicación está diseñada para ser fácil de usar y navegar.
