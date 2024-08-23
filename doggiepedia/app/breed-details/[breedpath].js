@@ -1,8 +1,9 @@
 import { getBreedDetails, getBreedImage } from "../../lib/doggiePedia";
 import Screen from "../../components/Screen";
+import Loader from "../../components/Loader";
 import { useEffect, useState } from "react";
 import { Stack, useLocalSearchParams, Link } from "expo-router";
-import { View, Image, ScrollView, ActivityIndicator, Text } from "react-native";
+import { View, Image, ScrollView, Text } from "react-native";
 
 export default function BreedDetail() {
   const { breedpath } = useLocalSearchParams();
@@ -14,50 +15,59 @@ export default function BreedDetail() {
     }
   }, [breedpath]);
 
+  if (!breedInfo) {
+    return <Loader />;
+  }
+
   return (
     <Screen>
-      {breedInfo === null ? (
-        <ActivityIndicator
-          color="#fff"
-          size="large"
-          className="flex-1 justify-center items-center"
+      <>
+        <Stack.Screen
+          options={{
+            headerStyle: { backgroundColor: "#3e210a" },
+            headerTintColor: "#e9c120",
+            headerTitle: breedInfo.display.name,
+          }}
         />
-      ) : (
-        <>
-          <Stack.Screen
-            options={{
-              headerStyle: { backgroundColor: "#ffee00" },
-              headerTintColor: "black",
-              headerTitle: breedInfo.display.name,
-            }}
-          />
-          <ScrollView className="p-4 bg-gray-800">
-            <View className="items-center">
+        <ScrollView className="p-4 bg-orange-300">
+          <View className="items-center">
+            <View className="items-center mb-6">
               <Image
-                className="w-52 h-72 rounded-lg mb-4"
+                className="w-64 h-52 rounded-lg mb-6"
                 source={{ uri: getBreedImage(breedInfo.slug) }}
+                resizeMode="cover"
               />
-              <Text className="text-white text-center font-bold text-2xl mb-2">
-                {breedInfo.info.personality_type}
-              </Text>
-              <Text className="text-white text-center text-base mb-6">
+              <Text className="text-orange-950 text-center text-lg leading-relaxed mb-8 px-6">
                 {breedInfo.display.paragraph}
               </Text>
+            </View>
 
-              {/* Additional Details Section */}
-              <Text className="text-yellow-400 text-lg font-semibold mb-2">
+            {/* Additional Details Section */}
+            <View className="w-full bg-orange-900 rounded-lg p-4 mb-6">
+              <Text className="text-yellow-400 text-lg font-semibold mb-3 text-center">
+                Personality Type
+              </Text>
+              <Text className="text-white text-center text-base">
+                {breedInfo.info.personality_type}
+              </Text>
+            </View>
+
+            <View className="w-full bg-orange-900 rounded-xl p-5 mb-6">
+              <Text className="text-yellow-400 text-lg font-semibold mb-3 text-center">
                 Adjectives
               </Text>
-              <Text className="text-white text-center mb-4">
+              <Text className="text-white text-center text-base">
                 {breedInfo.display.adjectives.a1},{" "}
                 {breedInfo.display.adjectives.a2},{" "}
                 {breedInfo.display.adjectives.a3}
               </Text>
+            </View>
 
+            <View className="w-full bg-orange-900 rounded-lg p-4 mb-6">
               <Text className="text-yellow-400 text-lg font-semibold mb-2">
                 Physical Characteristics
               </Text>
-              <View className="space-y-2 mb-6">
+              <View className="space-y-2">
                 <Text className="text-white text-left">
                   Weight (Male): {breedInfo.physical.weight_range.male.min} -{" "}
                   {breedInfo.physical.weight_range.male.max} lbs
@@ -79,11 +89,13 @@ export default function BreedDetail() {
                   {breedInfo.physical.lifespan.max} years
                 </Text>
               </View>
+            </View>
 
+            <View className="w-full bg-orange-900 rounded-lg p-4 mb-6">
               <Text className="text-yellow-400 text-lg font-semibold mb-2">
                 Social Characteristics
               </Text>
-              <View className="space-y-2 mb-6">
+              <View className="space-y-2">
                 <Text className="text-white text-left">
                   Friendly: {breedInfo.social.friendly}/10
                 </Text>
@@ -97,7 +109,9 @@ export default function BreedDetail() {
                   Bark: {breedInfo.social.bark}/10
                 </Text>
               </View>
+            </View>
 
+            <View className="w-full bg-orange-900 rounded-lg p-4 mb-6">
               <Text className="text-yellow-400 text-lg font-semibold mb-2">
                 Other Details
               </Text>
@@ -123,20 +137,22 @@ export default function BreedDetail() {
                   {breedInfo.info.monthly_cost.max}
                 </Text>
               </View>
+            </View>
 
+            <View className="p-4 mb-6 items-center">
               {/* Link to the Group Detail */}
               <Link
                 href={`/group-details/${breedInfo.display.group}`}
-                className="mt-6 px-4 py-2 bg-yellow-500 rounded-full"
+                className="w-full px-4 py-4 bg-orange-900 rounded-lg"
               >
-                <Text className="text-gray-800 text-center font-semibold">
+                <Text className="text-yellow-400 text-center font-semibold">
                   View Group Details
                 </Text>
               </Link>
             </View>
-          </ScrollView>
-        </>
-      )}
+          </View>
+        </ScrollView>
+      </>
     </Screen>
   );
 }

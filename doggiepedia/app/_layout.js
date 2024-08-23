@@ -6,7 +6,8 @@ export default function Layout() {
     <View className="flex-1">
       <Stack
         screenOptions={{
-          headerTintColor: "black",
+          headerStyle: { backgroundColor: "#3e210a" },
+          headerTintColor: "#e9c120",
           headerTitle: "DoggiePedia",
         }}
       />

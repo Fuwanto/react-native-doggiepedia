@@ -36,13 +36,6 @@ export default function Main() {
 
   return (
     <Screen>
-      <Stack.Screen
-        options={{
-          headerStyle: { backgroundColor: "#ffee00" },
-          headerTintColor: "black",
-          headerTitle: "DoggiePedia",
-        }}
-      />
       <FlatList
         data={breeds}
         keyExtractor={(item) => item.path}
