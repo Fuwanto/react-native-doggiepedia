@@ -1,41 +1,41 @@
 # Doggiepedia App
 
-Doggiepedia App es una aplicación móvil construida con **React Native** que utiliza la API de [Doggiepedia](https://api.doggiepedia.org/) para mostrar información sobre diferentes razas de perros.
+Doggiepedia App is a mobile application built with **React Native** that uses the [Doggiepedia](https://api.doggiepedia.org/) API to display information about different dog breeds.
 
-## Características
+## Features
 
-<img src="doggiepedia/screenshoots/home.jpeg" alt="Captura de pantalla de la aplicación" width="200"/><img src="doggiepedia/screenshoots/breed-details-1.jpeg" alt="Captura de pantalla de la aplicación" width="200"/><img src="doggiepedia/screenshoots/breed-details.jpeg" alt="Captura de pantalla de la aplicación" width="200"/><img src="doggiepedia/screenshoots/group-details.jpeg" alt="Captura de pantalla de la aplicación" width="200"/>
+<img src="doggiepedia/screenshoots/home.jpeg" alt="App screenshot" width="200"/><img src="doggiepedia/screenshoots/breed-details-1.jpeg" alt="App screenshot" width="200"/><img src="doggiepedia/screenshoots/breed-details.jpeg" alt="App screenshot" width="200"/><img src="doggiepedia/screenshoots/group-details.jpeg" alt="App screenshot" width="200"/>
 
-- **Explorar Razas de Perros**: Los usuarios pueden explorar diversas razas de perros y obtener información detallada sobre cada una.
-- **Interfaz Intuitiva**: La aplicación está diseñada para ser fácil de usar y navegar.
+- **Explore Dog Breeds**: Users can explore various dog breeds and get detailed information about each one.
+- **Intuitive Interface**: The app is designed to be easy to use and navigate.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 - **Mobile App**: [React Native](https://reactnative.dev/)
 - **API**: [Doggiepedia API](https://api.doggiepedia.org/)
 
-## Cómo Ejecutar el Proyecto
+## How to Run the Project
 
-### Prerrequisitos
+### Prerequisites
 
-- Node.js y npm instalados
-- Expo CLI instalado
+- Node.js and npm installed
+- Expo CLI installed
 
-### Instrucciones
+### Instructions
 
-1. **Clonar el repositorio**:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/Fuwanto/react-native-doggiepedia.git
    ```
-2. **Navegar al directorio del proyecto**:
+2. **Navigate to the project directory**:
    ```bash
    cd doggiepedia
    ```
-3. **Instalar las dependencias**:
+3. **Install dependencies**:
    ```bash
    npm install
    ```
-4. **Iniciar el proyecto en un emulador o dispositivo físico**:
+4. **Start the project on an emulator or physical device**:
    ```bash
    expo start
    ```
